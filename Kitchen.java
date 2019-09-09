@@ -1,5 +1,3 @@
-package chemicalstock;
-
 import java.io.FileNotFoundException;
 
 public class Kitchen extends Chemicals{

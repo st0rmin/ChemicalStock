@@ -1,5 +1,3 @@
-package chemicalstock;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -97,7 +95,7 @@ public class Chemicals extends GUI {
 		chemFrame.setResizable(false);
 		guiFrame.setVisible(false);
 		chemPanel.setLayout(null);
-		ImageIcon title = new ImageIcon(getClass().getResource("title.png"));
+		ImageIcon title = new ImageIcon(getClass().getResource("/images/title.png"));
 		JLabel titleLabel = new JLabel(title);
 		titleLabel.setLocation((chemFrame.getWidth() - title.getIconWidth()) / 2, chemFrame.getHeight() - 550);
 		titleLabel.setSize(new Dimension(title.getIconWidth(), title.getIconHeight()));

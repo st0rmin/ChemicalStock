@@ -1,5 +1,3 @@
-package chemicalstock;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -30,7 +28,7 @@ public class Login extends GUI {
 		guiFrame.setVisible(false);
 		loginPanel.setLayout(null);
 
-		ImageIcon flask = new ImageIcon(getClass().getResource("flask.png"));
+		ImageIcon flask = new ImageIcon(getClass().getResource("/images/flask.png"));
 		JLabel flaskLabel = new JLabel(flask);
 		flaskLabel.setLocation((int) (loginFrame.getSize().getWidth() / 2 - 110), 20);
 		flaskLabel.setSize(new Dimension(flask.getIconWidth(), flask.getIconHeight()));

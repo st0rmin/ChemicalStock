@@ -1,5 +1,3 @@
-package chemicalstock;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -121,7 +119,7 @@ public class EditChemicals extends Chemicals{
 		chemTypeLabel.setVisible(true);
 
 		String[] chemType = { "Acid", "Inorganic Salt", "Nitrate", "Metal", "Kitchen" };
-		JComboBox chemTypeBox = new JComboBox(chemType);
+		JComboBox<String> chemTypeBox = new JComboBox<String>(chemType);
 		chemTypeBox.setSize(90, 20);
 		chemTypeBox.setLocation(this.staticWidth / 9 - 3, this.staticHeight / 15 + 20);
 		chemTypeBox.setVisible(true);
@@ -149,7 +147,7 @@ public class EditChemicals extends Chemicals{
 		restockAmount.setVisible(true);
 
 		String[] unitTypes = { "mg", "g", "mL", "L" };
-		JComboBox units = new JComboBox(unitTypes);
+		JComboBox<String> units = new JComboBox<String>(unitTypes);
 		units.setSize(60, 20);
 		units.setLocation(this.staticWidth / 4 + 15, this.staticHeight / 15 + 60);
 		units.setVisible(true);
@@ -358,7 +356,7 @@ public class EditChemicals extends Chemicals{
 		units.setLocation(this.staticWidth / 9 + 110, this.staticHeight / 12 + 40);
 		units.setVisible(true);
 
-		JComboBox chemNameBox = new JComboBox(chemList.toArray());
+		JComboBox<Object> chemNameBox = new JComboBox<Object>(chemList.toArray());
 		chemNameBox.setSize(150, 20);
 		chemNameBox.setLocation(this.staticWidth / 9 - 22, this.staticHeight / 12);
 		for (int i = 0; i < completeChemList.size(); i++) {
@@ -557,7 +555,7 @@ public class EditChemicals extends Chemicals{
 		restockAmount.setVisible(true);
 
 		String[] unitTypes = { "mg", "g", "mL", "L" };
-		JComboBox units = new JComboBox(unitTypes);
+		JComboBox<String> units = new JComboBox<String>(unitTypes);
 		units.setSize(50, 20);
 		units.setLocation(this.staticWidth / 4 + 5, this.staticHeight / 15 + 30);
 		units.setVisible(true);

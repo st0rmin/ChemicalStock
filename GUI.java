@@ -1,5 +1,3 @@
-package chemicalstock;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -10,16 +8,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import Acids.java;
-import Chemicals.java;
-import EditChemicals.java;
-import InorganicSalts.java;
-import Kitchen.java;
-import Login.java;
-import Metals.java;
-import Nitrates.java;
-import RestockWarning.java;
-
 
 public class GUI extends JPanel {
 	/**
