@@ -26,17 +26,9 @@ I decided that an interactable database would be the best solution for Mrs. Rush
 
 # Design
 
-
-
-
-
-
-
 The diagram below shows all of the major classes used in the project. The diagram is set up in a UML format for easier understanding.
 
-
-
-
+![alt text](README Images/uml.png)
 
 The programs main() method is the entry point and it instantiates the GUI class. From there, the rest of the program runs, with the has-a relationship between Mainframe and Chemicals and Login.
 
