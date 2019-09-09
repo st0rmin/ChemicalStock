@@ -109,7 +109,7 @@ Make backups of the stock files and then use them in the program to ensure that 
 | 2 | First meeting with Computer Science teacher, Dr. Christopher | To approve the project and discuss possible solutions and how to improve upon them. | 2 days | September 22, 2017 | A |
 | 3 | Discussion with Dr. Christopher | Discuss language usage and how the program is to be constructed. | 3 days | October 5, 2017 | A |
 | 4 | Meeting with Mrs. Rushing | Approval of the proposed user interface, options, and flow of the program. | 2 days | November 1, 2017 | B |
-| 5 | Finalize Criterion A with Success Criteria | To finish the planning phase of the solution with specific goals for success | 3 days | November 10, 2017 | A, |
+| 5 | Finalize Criterion A with Success Criteria | To finish the planning phase of the solution with specific goals for success | 3 days | November 10, 2017 | A |
 | 6 | Start Program Designing | Flowcharts for algorithms and hierarchical class structure | 1 week | November 27, 2017 | B |
 | 7 | Coding GUI Mainframe | Produce a super class by which the GUI of the program is controlled | 2 weeks | December 25, 2017 | B/C |
 | 8 | Coding Welcome/Login Screen | Produce an interactable user interface which allows only Mrs. Rushing to log in with predetermined credentials | 1.5 weeks | January 17, 2018 | C |
@@ -133,17 +133,17 @@ Make backups of the stock files and then use them in the program to ensure that 
 
 **Techniques Used:**
 
-- --Encapsulation
-- --User Interface
-- --Inheritance
-- --Searching for specified data in a file
-- --Parsing a text file
-- --Merging two or more sorted data structures
-- --Use of additional libraries
-- --Inserting data into an ordered sequential file
-- --Deleting data from a sequential file
-- --Implementing a hierarchical composite data structure
-- --Arrays of two or more dimensions
+- Encapsulation
+- User Interface
+- Inheritance
+- Searching for specified data in a file
+- Parsing a text file
+- Merging two or more sorted data structures
+- Use of additional libraries
+- Inserting data into an ordered sequential file
+- Deleting data from a sequential file
+- Implementing a hierarchical composite data structure
+- Arrays of two or more dimensions
 
 When the program is started initially, a GUI object is created. This is done by instantiating the GUI class.
 
