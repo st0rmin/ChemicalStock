@@ -28,55 +28,53 @@ I decided that an interactable database would be the best solution for Mrs. Rush
 
 The diagram below shows all of the major classes used in the project. The diagram is set up in a UML format for easier understanding.
 
-![alt text](README_Images/uml.PNG?style=centerme)
+<p align="center">
+  <img src="README_Images/uml.PNG">
+</p>
 
 The programs main() method is the entry point and it instantiates the GUI class. From there, the rest of the program runs, with the has-a relationship between Mainframe and Chemicals and Login.
 
 **User Interface/General Flow**
 
- 
+<p align="center">
+  <img src="README_Images/ui1.PNG">
+</p>
 
 The user is presented with a login screen. When correct credentials are inputted, they are presented with the Chemicals user interface, which is a subclass of the GUI Mainframe.
 
- 
+<p align="center">
+  <img src="README_Images/ui2.PNG">
+</p>
 
 Once inside, they can choose a button to choose a chemical type, which will be a subclass of the Chemicals class, presenting with a display of the current stock in a table.
 
-
+<p align="center">
+  <img src="README_Images/ui3.PNG">
+</p>
 
 **Login**
 
 The Login class allows the user to login to the program. Without successful authorization, the user will not be allowed to use the rest of the features of the program.
 
-
-
-
-
-
-
-
+<p align="center">
+  <img src="README_Images/loginflow.PNG">
+</p>
 
 **File Storage Format**
 
- 
-
 The data inputted by the user will be stored in a .txt file, which can be easily accessed and created by Java. Each chemical type has its own stock file.
 
-
+<p align="center">
+  <img src="README_Images/acidstock.png">
+</p>
 
 **Restock Algorithm**
 
 After chemical values have been edited, the program will check if the current amount of chemical is below the restock threshold. If this is true, the user will see the chemical on the list of those needed to be restocked.
 
-
-
-
-
-
-
-
-
-
+<p align="center">
+  <img src="README_Images/restockalg.PNG">
+</p>
 
 **Testing Plan**
 
@@ -90,8 +88,6 @@ After chemical values have been edited, the program will check if the current am
 8. Ensure that chemical types that do not use molarity do not have a column for it in the JTable, maintaining simplicity and decluttering the program.
 
 Make backups of the stock files and then use them in the program to ensure that they function correctly.
-
-
 
 # Record of Tasks
 
@@ -141,80 +137,132 @@ When the program is started initially, a GUI object is created. This is done by 
 
 This GUI object creates a window that is the initial window that the user is presented with. This splash includes a JButton. It is the baseline GUI which interacts with other classes, giving them variables such as screenSize.
 
- 
+<p align="center">
+  <img src="README_Images/dev1.png">
+</p>
 
 The JButton has an action listener that, when the button is pressed, instantiates a Login object.
 
- 
+<p align="center">
+  <img src="README_Images/dev2.png">
+</p>
 
 This Login object creates a window that presents the user with two JTextFields, Username and Password, which are compared to the stored username and password on file when the JButton Enter is pressed. If the usernames and passwords match, a Chemicals object is instantiated, however, if they do not match, the user is presented with an error asking them to reenter the correct details.
 
- 
+<p align="center">
+  <img src="README_Images/dev3.png">
+  <img src="README_Images/dev4.png">
+</p>
 
 The instantiated Chemical object creates a window that presents several button options: Acids, Inorganic Salts, Nitrates, Metals, Kitchen, and Edit Chemicals.
 
-
-
+<p align="center">
+  <img src="README_Images/dev5.png">
+</p>
 
 When the EditChemicals JButton is pressed, an EditChemicals object is instantiated and the user is presented with a window in which they can add or remove chemicals.
 
-
+<p align="center">
+  <img src="README_Images/dev6.png">
+  <img src="README_Images/dev7.png">
+</p>
 
 When the Add Chemical JButton is pressed, a new panel is opened which presents the user with options for a chemical name, molarity, chemical type, amount, unit type, restock threshold, and add.
 
- 
+<p align="center">
+  <img src="README_Images/dev8.png">
+  <img src="README_Images/dev9.png">
+</p>
 
 When the add button is pressed, a chemical object is created, and the inputted chemical is stored into a respective stock file through the designate and store methods.
 
- 
+<p align="center">
+  <img src="README_Images/dev10.png">
+  <img src="README_Images/dev11.png">
+  <img src="README_Images/dev12.png">
+</p>
 
 The remove chemical button on the edit chemical panel creates a new frame and panel in which the user is prompted to select a chemical type. The FileWriter starts an instance in which the stock file can be written to using the PrintWriter, which actually writes/appends the data.
 
-
+<p align="center">
+  <img src="README_Images/dev13.png">
+</p>
 
 Choosing a chemical type will create a new frame and panel in which all of the chemicals of that type are presented through a JComboBox and the user can remove a specified amount.
 
- 
+<p align="center">
+  <img src="README_Images/dev14.png">
+</p>
 
 Upon clicking the remove button, the entered amount and the current amount are differentiated and reinputted into the stock file. If they subtract to 0, the entire chemical line is deleted. If they subtract to less than 0, then the user is presented with a JOptionPane, indicating their error.
 
- The data can then be displayed when pressing one of the chemical type buttons on the general chemicals GUI. The data is read from the file into several arrays, including a two-dimensional array, using the Display method which are then transposed onto a table and displayed to the user. The arrays are dynamic in the sense that only certain chemical types use certain modifiers. For instance, kitchen won&#39;t use molarity, so the molarity values are 0, removing the Molarity column on the JTable. The arrays must be modified to reflect this.
+<p align="center">
+  <img src="README_Images/dev15.png">
+</p>
 
+ The data can then be displayed when pressing one of the chemical type buttons on the general chemicals GUI. The data is read from the file into several arrays, including a two-dimensional array, using the Display method which are then transposed onto a table and displayed to the user. The arrays are dynamic in the sense that only certain chemical types use certain modifiers. For instance, kitchen won&#39;t use molarity, so the molarity values are 0, removing the Molarity column on the JTable. The arrays must be modified to reflect this.
+ 
+<p align="center">
+  <img src="README_Images/dev16.png">
+  <img src="README_Images/dev17.png">
+</p>
 
 The code produces the following user interface:
 
-
+<p align="center">
+  <img src="README_Images/dev18.png">
+</p>
 
 If the user attempts to click a chemical type button when there is no data created yet, they are presented with a JOptionPane indicating their error and the chemPanelAdd method is called again to reset the instance.
 
-
+<p align="center">
+  <img src="README_Images/dev19.png">
+  <img src="README_Images/dev20.png">
+</p>
 
 To make editing chemicals easier, the JTable is made editable in the Amount and Restock Threshold columns, as a TableModelListener can be used to detect changes. In this case, it is used to call the editChemicalsNoGUI method, which edits stock amounts without an interface. If the amount entered is negative, then a JOptionPane appears, indicating their mistake.
 
+<p align="center">
+  <img src="README_Images/dev21.png">
+</p>
 
 The editChemicalsNoGUI uses the column position and row position to navigate the array of inputted data, changing the data at the correct position, and then rewriting the data files with the new arrays using FileWriter and PrintWriter.
 
-
+<p align="center">
+  <img src="README_Images/dev22.png">
+</p>
 
 Returning to the general display screen, there is a JButton called &quot;Add&quot; which will allow the user to add a new chemical that is not on the list. This JButton calls the addChemicalTableButton method in the editChemicals class which is similar to the addChemical method, only removing the chemical type option as it is given based on which table is currently displayed.
-
-
-
  
+<p align="center">
+  <img src="README_Images/dev23.png">
+  <img src="README_Images/dev24.png">
+</p>
 
 When the add button is pressed in the addChemicalTableButton user interface, a new chemical is added to the stock list and the chemical display frame is disposed and remade so that the update can be seen added to the table.
 
+<p align="center">
+  <img src="README_Images/dev25.png">
+</p>
 
 To return to the home Chemicals screen, the back JButton is pressed, disposing the current frame and instantiating a new Chemicals object to get a fresh instance through an action listener.
 
+<p align="center">
+  <img src="README_Images/dev26.png">
+</p>
 
 The final part of the program resides in the RestockWarning class, which is a subclass of the Chemicals class to inherit values and methods. The displayRestockChem reads in the specified chemical type&#39;s stock file into a two-dimensional List and compares the current stock value and the restock threshold. If the restock threshold is higher than or equal to the current stock value, the name and molarity are added to an ArrayList called chemList.
 
-
+<p align="center">
+  <img src="README_Images/dev27.png">
+</p>
 
 This method is called for each chemical type and each list is added to a JPanel in a method called create. Inside this method, the panel is placed into a JScrollPane, so that if there is an excess of data, it can be scrolled through. This method is called from the Chemicals class and appears on the default Chemicals interface.
 
-
+<p align="center">
+  <img src="README_Images/dev28.png">
+  <img src="README_Images/dev29.png">
+</p>
 
 # Evaluation
 
